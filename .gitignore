@@ -206,6 +206,10 @@ data/
 requirements*.txt
 test.py
 
+### MY FILES
+test.py
+autoconfig.py
+json_func.py
 
 ### ENVS
 .env*
