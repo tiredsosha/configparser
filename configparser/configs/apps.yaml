@@ -1,0 +1,28 @@
+Taksofon:
+  en_zone: str
+  ru_zone: str
+  pc_ip: 192.168.1.1 ip4
+  pc_mac: 7C:10:C9:1D:A2:36 mac/str
+  5_themes: Bool
+  lasers: int
+  composers: int
+  body: int
+  depth: int
+  game_en_name: str
+  game_ru_name: str
+  file_name: str
+  scenes:
+  - balstrike
+  - bstrike
+  commands:
+  - bb
+  - bst
+  led: Bool
+
+
+
+
+
+BApp:
+  enname: aaa
+  runame: hello2
