@@ -1,28 +1,33 @@
 Taksofon:
   en_zone: str
   ru_zone: str
-  pc_ip: 192.168.1.1 ip4
-  pc_mac: 7C:10:C9:1D:A2:36 mac/str
-  5_themes: Bool
-  lasers: int
-  composers: int
-  body: int
-  depth: int
+  ip: 192.168.1.1
+  mac: 7C:10:C9:1D:A2:36
+  five_themes: False
+  lasers: 1
+  composers: 0
+  body: 0
+  depth: 0
   game_en_name: str
   game_ru_name: str
   file_name: str
   scenes:
-  - balstrike
-  - bstrike
-  commands:
-  - bb
-  - bst
-  led: Bool
-
-
-
-
+    Toys: level3Toys
+    New Year: NewYear
+  led: False
 
 BApp:
-  enname: aaa
-  runame: hello2
+  en_zone: str
+  ru_zone: str
+  ip: 192.168.1.1
+  mac: 7C:10:C9:1D:A2:36
+  five_themes: True
+  game_en_name: str
+  game_ru_name: str
+  file_name: str
+  scenes:
+    Tos: level3s
+  led: False
+
+BA2pp:
+  en_zone: str

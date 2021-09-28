@@ -8,37 +8,40 @@ from pydantic import validator, BaseModel
 class Park(BaseModel):
     admin_ip: IPv4Address
     language: str = True
-    username: Optional[str] = 'ShrWAPek'
-    password: Optional[str] = 'O403seL'
+    username: Optional[str] = "ShrWAPek"
+    password: Optional[str] = "O403seL"
     theme: str = True
 
-
-    @validator('language')
+    @validator("language")
     def lang_to_bool(cls, val):
         val = val.lower()
-        if 'en' in val:
+        if "en" in val:
             value = True
-        elif 'ru' in val:
+        elif "ru" in val:
             value = False
         else:
-            raise ValueError(f'\nПоле Language принимает только значения en/ru\nИсправь park.yaml')
+            raise ValueError(
+                f"\nПоле Language принимает только значения en/ru\nИсправь park.yaml"
+            )
         return value
 
-    @validator('theme')
+    @validator("theme")
     def theme_to_bool(cls, val):
         val = val.lower()
-        if 'hp' in val:
+        if "hp" in val:
             value = True
-        elif 'hc' in val:
+        elif "hc" in val:
             value = False
         else:
-            raise ValueError(f'\nПоле Theme принимает только значения hc/hp. Исправь park.yaml')
+            raise ValueError(
+                f"\nПоле Theme принимает только значения hc/hp. Исправь park.yaml"
+            )
         return value
 
-    @validator("username", pre=True, always=True)
-    def set_name(cls, val):
-        return val or 'ShrWAPek'
+    @validator("username", always=True)
+    def set_username(cls, val):
+        return val or "ShrWAPek"
 
-    @validator("password", pre=True, always=True)
-    def set_name(cls, val):
-        return val or 'O403seL'
+    @validator("password", always=True)
+    def set_password(cls, val):
+        return val or "O403seL"
